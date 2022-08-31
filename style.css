@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Criando variável padrões */
+:root {
+  /* backagrounds  */
+  --bg-color: #00082f;
+  --text-color: #edf2ff;
+  --text-color-dark: rgb(36, 25, 91);
+  --primary-color: #4263eb;
+
+  /* font family  */
+  --fontFamily: "Righteous", cursive;
+
+  /* font size  e color*/
+  --fontNormal: 2rem;
+  --fontMobile: 1rem;
+
+  /* Transições */
+  --transtion: all 4s ease-in-out;
+  --transtion-custom: all 1s cubic-bezier(1, 0, 0, 1);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.imgHeader {
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #fff;
+  margin: 20px 0;
+}
+
+.busca {
+  display: flex;
+  width: 300px;
+}
+.busca #searchInput {
+  flex: 1;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 0;
+}
+.busca button {
+  padding: 10px;
+  font-size: 15px;
+  border: 0;
+  background-color: #555;
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.busca button:hover {
+  background-color: #444;
+}
+
+.resultado {
+  width: 300px;
+  display: none;
+  border: 1px solid #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.titulo {
+  width: 100%;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+}
+.info .temp {
+  flex: 1;
+  text-align: center;
+}
+.info .vento {
+  flex: 1;
+  text-align: center;
+}
+.tempTitulo,
+.ventoTitulo {
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.tempInfo,
+.ventoInfo {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.tempInfo sup {
+  font-size: 15px;
+  font-weight: normal;
+}
+.ventoInfo span {
+  font-size: 15px;
+  font-weight: normal;
+}
+.ventoArea {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 20px;
+  padding-left: 25px;
+  padding-top: 25px;
+}
+.ventoPonto {
+  width: 15px;
+  height: 1px;
+  background-color: #fff;
+  transform-origin: left;
+}
+
+.aviso {
+  color: #fff;
+  padding-top: 20px;
+}
+
+/* Configuração whats */
+.whats {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.whats img {
+  max-width: 50px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+/* estilização do footer */
+
+footer {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 3px solid var(--primary-color);
+  margin-top: 10%;
+}
+
+.footerParagraph {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+footer .footerSocial {
+  color: var(--text-color);
+  position: relative;
+  display: flex;
+}
+
+footer .footerSocial li {
+  list-style: none;
+}
+
+footer .footerSocial li a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  display: inline-block;
+  transition: 0.5s;
+  margin: 0px 10px;
+}
+
+.footerSocial li a:hover {
+  opacity: 0.75;
+  transform: translateY(-10px);
+  color: var(--primary-color);
+}
